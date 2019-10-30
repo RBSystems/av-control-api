@@ -1,8 +1,9 @@
-module github.com/byuoitav/drivers/sonyrest
+module github.com/byuoitav/av-control-api/drivers/sonyrest
 
 go 1.13
 
 require (
+	github.com/byuoitav/av-control-api v0.0.0-20191022212553-f2efeb162897 // indirect
 	github.com/byuoitav/common v0.0.0-20191009134525-e6882d6c07f5 // indirect
 	github.com/byuoitav/pooled v0.0.0-20191022213741-dad43433a657 // indirect
 	github.com/fatih/color v1.7.0 // indirect

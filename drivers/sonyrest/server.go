@@ -27,6 +27,7 @@ func main() {
 
 	server := drivers.CreateDisplayServer(display)
 	if err = server.Serve(lis); err != nil {
-
+		fmt.Printf("error while listening: %s/n", err)
+		os.Exit(1)
 	}
 }
