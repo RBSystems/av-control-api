@@ -24,9 +24,13 @@ func main() {
 		os.Exit(1)
 	}
 
-	dsp := &qsc.DSP{}
+	create := func(addr string) drivers.DSP {
+		return &qsc.DSP{
+			Address: addr,
+		}
+	}
 
-	server := drivers.CreateDSPServer(dsp)
+	server := drivers.CreateDSPServer(create)
 	if err = server.Serve(lis); err != nil {
 		fmt.Printf("error while listening: %s\n", err)
 		os.Exit(1)
