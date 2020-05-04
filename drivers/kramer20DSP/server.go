@@ -39,7 +39,7 @@ func main() {
 	}
 
 	// create server
-	server := drivers.CreateDSPServer(createDSP)
+	server, err := drivers.CreateDSPServer(createDSP)
 	if err = server.Serve(lis); err != nil {
 		fmt.Printf("failed to listen: %s\n", err)
 		os.Exit(1)
